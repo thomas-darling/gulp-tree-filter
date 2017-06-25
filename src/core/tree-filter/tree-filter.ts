@@ -13,14 +13,14 @@ import * as chalk from "chalk";
 export type IFilterConfig = true|false|
 {
     /**
-     * The glob patterns specifying the files to include, where an empty array
-     * includes nothing, and undefined has no effect.
+     * The glob patterns specifying the files to include, where an
+     * empty array includes nothing, and undefined has no effect.
      */
     include?: string[]|undefined;
 
     /**
-     * The glob patterns specifying the files to exclude, where an empty array or
-     * undefined to exclude nothing.
+     * The glob patterns specifying the files to exclude, where an
+     * empty array or undefined to exclude nothing.
      */
     exclude?: string[]|undefined;
 }
@@ -98,14 +98,14 @@ export class Filter
     public readonly folderPath: string;
 
     /**
-     * The glob patterns specifying the files to include, where an empty array
-     * includes nothing, and undefined has no effect.
+     * The glob patterns specifying the files to include, where an
+     * empty array includes nothing, and undefined has no effect.
      */
     public readonly include: string[]|undefined;
 
     /**
-     * The glob patterns specifying the files to exclude, where an empty array or
-     * undefined to exclude nothing.
+     * The glob patterns specifying the files to exclude, where an
+     * empty array or undefined to exclude nothing.
      */
     public readonly exclude: string[]|undefined;
 

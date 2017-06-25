@@ -9,13 +9,14 @@ export const pluginName = "gulp-tree-filter";
 export interface IPluginConfig
 {
     /**
-     * The glob to use when looking for the config files defining include and exclude globs.
+     * The glob to use when looking for the config files defining
+     * include and exclude globs.
      */
     configFileGlob: string;
 
     /**
-     * True if a path should be included by default, if no includes globs are specified,
-     * and no exclude globs matched.
+     * True if a path should be included by default, if no includes
+     * globs are specified, and no exclude globs matched.
      * Default is false.
      */
     includeByDefault?: boolean;

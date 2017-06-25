@@ -1,7 +1,7 @@
 {
   "name": "gulp-tree-filter",
-  "version": "1.0.0",
-  "description": "Gulp plugin that filters the files in the stream using include and exclude globs defined in config files located in the folder tree.",
+  "version": "1.0.1",
+  "description": "Gulp plugin that filters the files in the stream using include and exclude globs defined in config files located within the folder tree.",
   "keywords": [
     "gulp",
     "filter",

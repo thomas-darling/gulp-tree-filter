@@ -5,10 +5,12 @@
  * 2. Execute the command: gulp
  *
  * This will execute all the tasks in the correct order, producing output in the 'artifacts' folders.
+ * You may optionally specify '--debug' to enable debug logging.
  * --------------------------------------------------------------------------------------------------------------------
  */
 
 const gulp = require("gulp");
+const util = require("gulp-util");
 const del = require("del");
 const treeFilter = require("../lib/index");
 
@@ -17,7 +19,7 @@ const pluginConfig =
 {
     configFileGlob: "**/_filter.json",
     includeByDefault: true,
-    debug: true
+    debug: util.env.debug != null
 };
 
 /**
@@ -30,7 +32,8 @@ gulp.task("clean", function ()
 });
 
 /**
- * Filters the files being processed, as defined by the config files placed within the folder tree.
+ * Filters the files being processed, as defined by the config
+ * files placed within the folder tree.
  */
 gulp.task("filter", function ()
 {
