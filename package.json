@@ -1,0 +1,47 @@
+{
+  "name": "gulp-tree-filter",
+  "version": "1.0.0",
+  "description": "Gulp plugin that filters the files in the stream using include and exclude globs defined in config files located in the folder tree.",
+  "keywords": [
+    "gulp",
+    "filter",
+    "glob",
+    "tree",
+    "hierarchy",
+    "hierarchical"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Thomas Darling"
+  },
+  "homepage": "https://github.com/thomas-darling/gulp-tree-filter",
+  "bugs": {
+    "url": "https://github.com/thomas-darling/gulp-tree-filter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomas-darling/gulp-tree-filter.git"
+  },
+  "dependencies": {
+    "glob": "^7.1.2",
+    "gulp-util": "^3.0.8",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/chalk": "^0.4.31",
+    "@types/del": "^2.2.32",
+    "@types/glob": "^5.0.30",
+    "@types/gulp-util": "^3.0.31",
+    "@types/node": "7.0.18",
+    "@types/through2": "^2.0.32",
+    "@types/vinyl": "^2.0.0",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "typescript": "^2.3.2"
+  },
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js"
+}

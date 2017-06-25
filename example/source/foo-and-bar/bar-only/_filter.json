@@ -1,0 +1,6 @@
+{
+    "exclude":
+    [
+        "**/foo.html"
+    ]
+}

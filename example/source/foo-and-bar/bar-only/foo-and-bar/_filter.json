@@ -1,0 +1,7 @@
+{
+    "include":
+    [
+        "**/foo.html",
+        "**/bar.html"
+    ]
+}
