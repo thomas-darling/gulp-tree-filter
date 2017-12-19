@@ -3,6 +3,7 @@ import * as minimatch from "minimatch";
 import * as path from "path";
 import * as fs from "fs";
 import * as chalk from "chalk";
+import * as pathSort from "path-sort";
 
 /**
  * Represents the type to which a well-formed config file must be conform, where
@@ -39,8 +40,9 @@ export class TreeFilter
      */
     public constructor(configFileGlob: string)
     {
-        // Get the config file paths matching the specified glob, ordered by file path.
-        const globFilePaths = glob.sync(configFileGlob).sort();
+        // Get the config file paths matching the specified glob, ordered such that the files closest to the root come first.
+        // This means, that when applying the filters created from the config files, the most specific filter will win.
+        const globFilePaths = pathSort(glob.sync(configFileGlob));
 
         // Read the config files.
         this._filters = globFilePaths.map(filePath => new Filter(filePath));
